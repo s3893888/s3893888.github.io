@@ -1,9 +1,4 @@
-// We create an object array containing the videos
-const videoList = [
-    { name: "Zenscape", link: "zenscape.mp4" },
-    { name: "Stardust", link: "stardust.mp4" },
-  ];
-  
+
   let loop = false;
   
   const playPauseButton = document.querySelector("#play-pause-btn");
@@ -26,11 +21,15 @@ const videoList = [
   
   const loopButton = document.querySelector("#loop-btn");
   // Event listener to loop or replay the video on clicking the button
-  loopButton.addEventListener("click", loopVideo);
+  loopButton.addEventListener("click", loopVideo); 
+  // this broke the buttons, i think coz it was trying to find this function/button on the page and didn't so it went kaput
   
   const step1Button = document.querySelector("#step-1-btn");
   // Event listener to navigate to step 1 timestamp in video on clicking the button
   step1Button.addEventListener("click", gotoStep1);
+
+  const step2Button = document.querySelector("#step-2-btn");
+  step2Button.addEventListener("click", gotoStep2);
   
   const myVideo = document.querySelector("#my-video");
   const videoName = document.querySelector("#video-name");
@@ -77,6 +76,10 @@ const videoList = [
   //if the timestamp for step 1 is at 16.41s then it will set the currenttime to that
   function gotoStep1() {
     myVideo.currentTime = 16.41;
+  }
+
+  function gotoStep2() {
+    myVideo.currentTime = 0.01;
   }
   
   const secondVideoButton = document.querySelector("#second-video-btn");
