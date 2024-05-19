@@ -1,25 +1,26 @@
-
+  // Event listener for play pause button
   const playPauseButton = document.querySelector("#play-pause-btn");
   playPauseButton.addEventListener("click", togglePlay);
   const playPauseImg = document.querySelector("#play-pause-img");
-  
+  // Even listener for mute toggle
   const muteUnmuteButton = document.querySelector("#mute-unmute-btn");
   muteUnmuteButton.addEventListener("click", toggleAudio);
   const muteUnmuteImg = document.querySelector("#mute-unmute-img");
-  
+  // Event listener for increasing volume
   const increaseVolumeButton = document.querySelector("#increase-volume-btn");
   increaseVolumeButton.addEventListener("click", increaseVolume);
-  
+  // Event listener for decreasing volume
   const decreaseVolumeButton = document.querySelector("#decrease-volume-btn");
   decreaseVolumeButton.addEventListener("click", decreaseVolume);
-  
+  // loop setting so the toggle button has something to toggle
   let loop = false;
+  // Event listener for loop button
   const loopButton = document.querySelector("#loop-btn");
   loopButton.addEventListener("click", loopVideo); 
-  
+  // Event listener for fisrt step button
   const step1Button = document.querySelector("#step-1-btn");
   step1Button.addEventListener("click", gotoStep1);
-
+  // Event listener for second step button
   const step2Button = document.querySelector("#step-2-btn");
   step2Button.addEventListener("click", gotoStep2);
   
@@ -29,8 +30,8 @@
 
   const progressBar = document.querySelector("#progress-bar-fill");
   
-  // Event listener to check time update on video to update the progress bar __________________FOR BAR
-  myVideo.addEventListener("timeupdate", updateProgressBar);
+  // Event listener to check time update on video to update the progress bar
+  myVideo.addEventListener("progressbar Span", updateProgressBar);
   
   // Event listener to check current volume
   myVideo.addEventListener("volumechange", updateVolume);
@@ -63,7 +64,7 @@
   }
 
   function gotoStep1() {
-    myVideo.currentTime = 16.41;
+    myVideo.currentTime = 95.01;
   }
 
   function gotoStep2() {
@@ -80,6 +81,8 @@
     }
   }
   
+  // Changing the colour of the button to indicate whether its been toggled or not
+
   function toggleAudio() {
     if (myVideo.muted) {
       myVideo.muted = false;
@@ -89,6 +92,8 @@
       muteUnmuteButton.style.backgroundColor = "rgba(208, 89, 245, 0.7)";
     }
   }
+
+    // Changing the colour of the button to indicate whether its been toggled or not
   
   function loopVideo() {
     if (loop) {
@@ -107,9 +112,8 @@
     progressBar.style.width = value + "%";
   }
   
-
-
-  //FULL SCREEEEEEEEEEEEEEEEEEN
+  const fullscreenButton = document.querySelector("#full-screen-btn");
+  fullscreenButton.addEventListener("click", toggleFullscreen);
 
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
@@ -128,3 +132,4 @@
       console.log("Exited fullscreen");
     }
   });
+

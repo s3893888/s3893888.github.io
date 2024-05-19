@@ -28,11 +28,21 @@
 
     </section>
 
+    <!-- Added the music viceo title so viewers can know what video they were watching.
+    I originally wanted it to be centered but failed to figure out what from the base media player code was holding it left. -->
+
     <section class="video-title">
       <h1>Zenscape</h1>
     </section>
 
+    <!-- Section for all the buttons and progress bar.
+    An easy layout for users to understand and see with simple universally recognised images for each button and its function.
+    All video player buttons put together on the left and audio/visual buttons on the right. -->
+
     <section class="video-controls">
+
+      <!-- Play button for music video stop and start function 
+      An important button for simply enjoying the media , first in the my line of buttons as the rest don't really matter unless the video is watched-->
 
       <button id="play-pause-btn">
         <audio src="btn-woosh.mp3" id="clickSound"></audio>
@@ -45,10 +55,17 @@
         />
       </button>
 
+      <!-- Replay button to "reset" the video to the start.
+      I couldn't figure out how to work a true replay button function but used the step function in place of it as an alternative
+      an important feature to enjoy a music video again, often to look at things you've missed in the video or to simply hear your newly found favourite song again!-->
+
       <button id="step-2-btn">
       <img src="https://img.icons8.com/ios-glyphs/30/replay.png" alt=""  width="24"
       height="24">
       </button> 
+
+      <!-- Loop button to toggle the videos ability to loop and play again once its ended 
+      This button is for music lovers that tend to play that one song over and over again, for hands free listening back to back-->
 
       <button id="loop-btn">
         <img
@@ -60,9 +77,15 @@
         />
       </button>
 
+      <!-- Progress bar to show how far through the video the viewer is 
+      important for both remembering your favourite part of a music video and for knowing how much left you have to enjoy the song or know where to come back to if you stop listening part way through it-->
+
       <div class="progress-bar">
         <span id="progress-bar-fill"></span>
       </div>
+
+      <!-- Toggle mute button for the music 
+      super important for those listening on speakers or people who simply want to enjoy the visual aspect of a music video-->
 
       <button id="mute-unmute-btn">
         <img
@@ -74,6 +97,9 @@
         />
       </button>
 
+      <!-- Volume down for more music control on the video
+      sometimes it can be overwhelmingly loud and its important to not damage any eardrums! so this is hear to allow for a comfortable and customisable listening level -->
+
       <button id="decrease-volume-btn">
         <img
           id="decrease-volume-img"
@@ -84,6 +110,9 @@
         />
       </button>
 
+      <!-- Volume up for more music control on the video 
+      Similarily to above, this is hear incase the user wants to really FEEL the music and crank the audio to as high as possible-->
+
       <button id="increase-volume-btn">
         <img
           id="increase-volume-img"
@@ -93,6 +122,9 @@
           height="24"
         />
       </button>
+
+      <!-- Fullscreen button to allow the viewer to see the music video in full
+      The visual part of the music video can often enhance the overall experience and so having it limited to the size ive set in the browser could diminish that, and so this button is for those that want to watch all and everything in the music video -->
 
       <button id="full-screen-btn">
         <img
@@ -106,13 +138,22 @@
 
     </section>
 
+    <!-- A new section to place the "music drop" button below the video controls
+    Pops out this button and highlights its importance -->
+
     <section class="timeline">
+
+      <!-- A step button to bring the music video to the more upbeat part of the music video 
+      This button is for those impatient music listeners that want to see if they'll like the song RIGHT AWAY! it skips to the "good part" and instantly allows the user to see if this is something they want to invest themselves to -->
+
       <button id="step-1-btn">MUSIC DROP </button>
     </section>
 
     </div>
   
     </main>
+
+    <!-- footer for my name :D -->
 
     <footer>
         <p>Matthew Hackett-Smith | s3893888</p>
