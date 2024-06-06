@@ -1,11 +1,11 @@
 (function() {
 
     let spot = document.querySelector('.spot');
-    let spotWHalf = spot.offsetWidth / 2;
+    let spotBox = spot.offsetWidth;
   
     document.body.addEventListener('mousemove',function(e){
-        spot.style.left = e.pageX - spotWHalf+'px';
-        spot.style.top = e.pageY - spotWHalf+'px';
+        spot.style.left = e.pageX - spotBox+'px';
+        spot.style.top = e.pageY - spotBox+'px';
     });
   
   })();
