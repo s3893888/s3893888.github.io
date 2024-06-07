@@ -1,14 +1,3 @@
-// (function() {
-
-//     let spot = document.querySelector('.spot');
-//     let spotBox = spot.offsetWidth;
-  
-//     document.body.addEventListener('mousemove',function(e){
-//         spot.style.left = e.pageX - spotBox+'px';
-//         spot.style.top = e.pageY - spotBox+'px';
-//     });
-  
-//   })();
 
 // get the search tool
 const searchTool = document.querySelector("#search-tool");
@@ -31,15 +20,9 @@ function addHover(spot) {
   spot.addEventListener("mouseover", function () {
     displayMessage(spot);
   });
-  spot.addEventListener("mouseout", function () {
-    hideMessage(spot);
-  });
 }
 
 function displayMessage(spot) {
-  spot.innerHTML = " <p>found trash </p>";
+  spot.innerHTML = " <p>Trash Found</p>";
 }
 
-function hideMessage(spot) {
-  spot.innerHTML = "";
-}
