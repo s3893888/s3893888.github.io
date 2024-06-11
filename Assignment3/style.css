@@ -18,6 +18,8 @@
     color: white;
     stroke: 3px black;
   } 
+
+  /* Here I tried to make an unobtrusive and clear style and easy to read text for what little there is. Unfortunately I couldn't quite get the text stroke or background to work  so it can be a little hard to read in some spots */
   
   .outer {
     width: 800px;
@@ -46,15 +48,27 @@
     position: fixed;
     z-index: 2;
     pointer-events: none;
-    /* twice the viewport size so it always covers fully */  
+ 
     width: 200vw;
     height: 200vh;
-    /* negative offset by half so we are sure we cover the full viewport */
+
     left: -100vw;
     top: -100vh;
     backdrop-filter: blur(15px);
     mask-image: radial-gradient(180px at 50% 50%, transparent 100%, black 100%);
   }
+
+  /* This blur is main attraction of the site and the hover interaction, it instantly lets the user know that the cursor is the focus. With it changing to a crosshair and revealing the image beneath the blur, it indicates that it wants them to find or click somehting, almost like a sniper. */
+  /* The grid container above allows me to separate the pieces of trash enough so that they have to scan the whole page as well as being a good enough size to make lose the users attention and make the interaction not even occur */
+  /* The interaction itself is simple, hover over whats out of place, the trash, and make it dissapear from the environment presented before you (clean it up). There are 3 pieces of trash in total and once you clear each one it says "Trash Found" */
+  /* Originally I was going to have a sound effect for each trash cleared, but I felt it took away from the essence of cleaning up nature as it is a silent objective with little to no reward apart from self satisfaction and pride. */
+  /* I also tried to implement a sort of "YOU DID IT" or "SUCCESS" pop-up for once you found all 3 pieces and finished the interaction. However, I had no idea how to define the variables required and thought that it also breached what I talked about before with it being a rewardless act. */
+  /* The 'trash found' text pop-up though was enough user feedback to say you got the rubbish and was almost like a little "yes!" that you'd whisper to yourself if you fixed a little problem or even cleaned your room, similar to this whole interactive. */
+
+  /* I hope to inspire some people to look a little more closely  in the world especially when it comes to rubbish as it's been found in all corners of the globe and it is quite sad. This small interaction might just make people see some RIGHT next to a bin and decide, "yeah I am clean that actually"  instead of walking by like most people do leaving it to sit and decompose over a decade in our beautiful earth*/
+  /* I had a lot of challenges in coding this, with most of it having something to do with having the code know where my mouse was. Whether to get that search tool, a hover image option or just getting the divs to interact with a mouse over effect was a long time struggle. Especially when I was trying to have the background hidden or blurred. Massive shoutout to my amazing uni teacher <3 for giving me a helping hand in the final interaction */
+  /* Otherwise I think changing the context was a great move and makes for a much more meaningful piece than the origianl wheres waldo idea that is much more of a gimmick theme */
+  /* I also had a few other ideas I wanted to implement like an "end screen" when you're done, but it's definitely a good start I think. And its helped a lot with my general understanding of code. It could be useful for if I ever get the chance to work on a videogame or something of that sort in the future :D */
   
   #grid-container > * {
     width: 100%;
